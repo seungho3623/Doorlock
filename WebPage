@@ -1,0 +1,102 @@
+index.html
+
+<html>
+<head>
+	<title>Web APP</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<button onClick="location.href='/cctv'" style="width:250;hegiht:250">CCTV</button>
+	<button onClick="location.href='/led'" style="width:250;hegiht:250">LED</button>
+	<button onClick="location.href='/key'" style="width:250;hegiht:250">KEY</button>
+</body>
+</html>
+
+cctv.html
+
+<html>
+<head>
+	<title>CCTV</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">CAMERA</h2>
+			<form method="post" action="{{ url_for('tasks') }}">
+			<input type="submit" value="Home" name="home"/>
+			<input type="submit" value="Stop/Start" name="stop" />
+			<input type="submit" value="Capture" name="click"/>
+			</form>
+            <img src="{{ url_for('video_feed') }}" height="80%">
+		
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+key.html
+
+<html>
+<head>
+	<title>KEY_CONTROL</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">KEY</h2>
+			<form method="post" action="{{ url_for('keys') }}">
+			<input type="submit" value="1" name="key_1" />
+			<input type="submit" value="2" name="key_2"/>
+			<input type="submit" value="3" name="key_3"/><br>
+			<input type="submit" value="4" name="key_4"/>
+			<input type="submit" value="5" name="key_5"/>
+			<input type="submit" value="6" name="key_6" /><br>
+			<input type="submit" value="7" name="key_7" />
+			<input type="submit" value="8" name="key_8" />
+			<input type="submit" value="9" name="key_9" /><br>
+			<input type="submit" value="*" name="key_*" />
+			<input type="submit" value="0" name="key_0" />
+			<input type="submit" value="#" name="key_#" />
+			<br><br>
+			<input type="submit" value="Home" name="home" />
+			</form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+led.html
+
+<html>
+<head>
+	<title>LED_CONTROL</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">LED_ON_OFF</h2>
+			<form method="post" action="{{ url_for('leds') }}">
+			<input type="submit" value="Home" name="home" />
+			<input type="submit" value="LED_ON" name="o" />
+			<input type="submit" value="LED_OFF" name="f" />
+			</form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
