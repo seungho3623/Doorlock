@@ -1,2 +1,6 @@
-Atemga328p 와 Raspberry Pi4(Flask 서버) Uart 통신을 사용하여 만든 도어락 
-Open CV 를 사용하여 실시간 영상 스트리밍 및 사진 촬영 가능
+Door lock made using Atemga328p and Raspberry Pi4 (Flask server) Uart communication.
+Real-time video streaming and photo taking using Open CV.
+
+1. Display password input value on LCD using switch keypad.
+2. If the input value is the same as the stored value, the front door is opened using a servo motor.
+3. If the entered value and the stored value are different, take a picture of the front door with the pie camera and send an email or SMS.
