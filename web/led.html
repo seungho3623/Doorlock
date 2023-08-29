@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>LED_CONTROL</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">LED_ON_OFF</h2>
+			<form method="post" action="{{ url_for('leds') }}">
+			<input type="submit" value="Home" name="home" />
+			<input type="submit" value="LED_ON" name="o" />
+			<input type="submit" value="LED_OFF" name="f" />
+			</form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
